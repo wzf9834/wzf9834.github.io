@@ -151,6 +151,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-two" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/two/">two</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/01/two/" class="archive-article-date">
+  	<time datetime="2019-12-01T08:03:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>、tomcat目录结构详解<br>打开tomcat的解压之后的目录可以看到如下的目录结构：</p>
+<p>1、bin：<br>bin目录主要是用来存放tomcat的命令，主要有两大类，一类是以.sh结尾的（linux命令），另一类是以.bat结尾的（windows命令）。可以把命令配置在环境变量里边<br>startup 用来启动tomcat<br>shutdown 用来关闭tomcat<br>修改catalina可以设置tomcat的内存<br>2、webapps：<br>webapps目录用来存放应用程序，当tomcat启动时会去加载webapps目录下的应用程序。可以以文件夹、war包、jar包的形式发布应用。<br>当然，你也可以把应用程序放置在磁盘的任意位置，在配置文件中映射好就行。<br>3、conf<br>conf目录主要是用来存放tomcat的一些配置文件。<br>server.xml可以设置端口号、设置域名或IP、默认加载的项目、请求编码<br>web.xml可以设置tomcat支持的文件类型<br>context.xml可以用来配置数据源之类的<br>tomcat-users.xml用来配置管理tomcat的用户与权限<br>4、lib:<br>lib目录主要用来存放tomcat运行需要加载的jar包。<br>例如，像连接数据库的jdbc的包我们可以加入到lib目录中来。<br>5、logs：<br>logs目录用来存放tomcat在运行过程中产生的日志文件，非常重要的是在控制台输出的日志。（清空不会对tomcat运行带来影响）<br>在windows环境中，控制台的输出日志在catalina.xxxx-xx-xx.log文件中<br>在linux环境中，控制台的输出日志在catalina.out文件中<br>6、temp：<br>temp目录用户存放tomcat在运行过程中产生的临时文件。（清空不会对tomcat运行带来影响<br>7、work:<br>work目录用来存放tomcat在运行时的编译后文件，例如JSP编译后的文件。<br>清空work目录，然后重启tomcat，可以达到清除缓存的作用。<br>2.2、了解java web项目目录结构</p>
+<p>web.xml配置文件</p>
+<p>项目启动时会加载web.xml配置文件<br>Web.xml文件的作用如下<br>1、指定欢迎页面，例如：</p>
+<p>上面的例子指定了几个欢迎页面，显示时按顺序从第一个找起，如果第一个存在，就显示第一个，后面的不起作用。如果第一个不存在，就找第二个，以此类推。<br>2、配置servlet、filter、<br>我们以后创建的servlet与filter需要在web.xml中配置才会生效，至于怎么配置后边的课程讲<br>2.3、掌握jsp概念<br>1、基本概念<br>JSP是运行在服务器端的程序，负责java web项目中的数据展示，以及前后数据的中转与交互<br>JSP页面中，可以写html、css、js代码、java代码、el表达式、jstl标签</p>
+<p>分别在jsp里边写对应的代码</p>
+<p>2、jsp的执行流程<br>翻译阶段<br>   当Web容器接收到JSP请求时，首先会对JSP文件进行翻译，将编写好的JSP文件通过JSP容器转换成可识别的Java源代码。<br>编译阶段<br>    将Java源文件编译成可执行的字节码文件<br>执行阶段<br>   经过翻译和编译两个阶段，生成了可执行的二进制字节码文件，此时进入执行阶段。当执行结束后，得到处理请求的结果，把生成的结果页面返回到浏览器客户端显示。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/01/two/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-one" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
